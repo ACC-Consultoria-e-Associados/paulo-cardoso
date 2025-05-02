@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cartão Paulo Cardoso</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #d9d9d9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    .card {
+      width: 360px;
+      height: 220px;
+      perspective: 1000px;
+    }
+
+    .card-inner {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transition: transform 1s;
+      transform-style: preserve-3d;
+    }
+
+    .card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    /* Frente */
+    .front {
+      background: #ffffff;
+      color: #3A3A3C;
+      padding: 30px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    text-align: center;
+      }
+
+    .front .name-row {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      padding-bottom: 10px;
+    }
+
+    .front .name-row .role {
+      color: #A7A9AC;
+      font-size: 14px;
+      font-weight: normal;
+      text-transform: lowercase;
+    }
+
+    .front .logo {
+      position: absolute;
+      bottom: 30px;
+      left: 20px;
+      width:300px;
+    }
+    
+
+    /* Verso */
+    .back {
+      background: #A4252A;
+      transform: rotateY(180deg);
+      color: #A7A9AC;
+      padding: 30px 30px;
+      font-size: 13px;
+      line-height: 1.6;
+      position: relative;
+    }
+
+    .back .info {
+      position: relative;
+      z-index: 2;
+      text-align: left;
+    }
+
+    .back .info a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .back .logo-bg {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 110px;
+      opacity: 0.2;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="card-inner">
+
+      <!-- Frente -->
+      <div class="card-face front">
+        <div class="name-row">
+          <div class="name">PAULO CARDOSO</div>
+          <div class="role">partner</div>
+        </div>
+        <img src="logoacc_final.png" class="logo" alt="Logo ACC" />
+        <div class="line"></div>
+      </div>
+
+      <!-- Verso -->
+      <div class="card-face back">
+        <div class="info"> <br>
+          R. Rodrigues Sampaio, 21 5ºD &nbsp;&nbsp;&nbsp; 1150-278 Lisboa_Portugal<br>
+          Tel. 21 345 55 55 &nbsp;&nbsp; Fax. 21 345 44 56<br><br>
+          <a href="mailto:acc.office@accportugal.pt">acc.office@accportugal.pt</a> &nbsp;&nbsp;
+          <a href="http://www.accportugal.pt" target="_blank">www.accportugal.pt</a><br><br>
+          Centro Empresarial ANJE.LVT _Sala ACC<br>
+          Qta. de Sta. Marta, Estr. da Circunvalação<br>
+          1495-120 Algés_Portugal<br>
+          Tel. 21 345 55 55 &nbsp;&nbsp; Fax. 21 345 44 56
+        </div>
+        <img src="logo_secundario_final.png" class="logo-bg" alt="Logo Transparente">
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
